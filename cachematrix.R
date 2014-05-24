@@ -26,8 +26,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## cacheSolve retruns the inverse of x by cheching for cached data and if nothing is cached it 
-## caches the result and returns the invers by calling solve(x)
+## cacheSolve retruns the inverse of x by cheching for cached data and
+## if nothing is already cached it caches the result and returns the 
+## inverse by calling solve(x) specifically
 cacheSolve <- function(x, ...) {
   invM <- x$getInv()
   if(!is.null(invM)) {
